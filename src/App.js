@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button>
+        <Button onClick={() => alert('hello')} variant="contained" color="primary">
           Hello World
         </Button>
         <img src={logo} className="App-logo" alt="logo" />

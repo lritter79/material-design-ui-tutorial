@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Button size="small"
-        disabled
+        style={{fontSize:12}}
         onClick={() => alert('hello')} variant="contained" color="primary">
           Hello World
         </Button>

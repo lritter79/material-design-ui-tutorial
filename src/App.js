@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from '@material-ui/icons/Delete';
+import TextField from '@material-ui/core/TextField';
 
 function CheckboxExample() {
   const [checked, setChecked] = useState(true)
@@ -31,6 +32,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <TextField
+          variant="outlined"
+          color="secondary"
+          type="date"
+          label="date"
+        />
+        <TextField
+          variant="filled"
+          color="secondary"
+          type="email"
+          value="testing@test.com"
+        />
         <CheckboxExample/>
         <ButtonGroup variant="contained" 
           color="primary">>

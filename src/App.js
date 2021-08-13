@@ -8,7 +8,8 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from '@material-ui/icons/Delete';
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { green, orange } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   root:{
@@ -17,6 +18,17 @@ const useStyles = makeStyles({
     borderRadius:15,
     color:'white',
     padding: '0 30px'
+  }
+})
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: orange[500],
+    },
+    secondary: {
+      main: green[400],
+    }
   }
 })
 
@@ -50,7 +62,10 @@ function CheckboxExample() {
 
 function App() {
   return (
-    <div className="App">
+    
+
+    <ThemeProvider theme={theme}>
+            <div className="App">
       <header className="App-header">
         <ButtonStyled></ButtonStyled>
         <TextField
@@ -91,6 +106,9 @@ function App() {
 
       </header>
     </div>
+    </ThemeProvider>
+
+    
   );
 }
 
